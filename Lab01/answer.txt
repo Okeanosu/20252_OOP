@@ -1,0 +1,7 @@
+- What happens if users choose "Cancel"?
+"Cancel" = "No" option (You have chosen: No)
+- How to customize the options to users with only 2 options: "Yes" and "No"
+JOptionPane.YES_NO_OPTION
+with 3 options: "Yes", "No", "Cancel"
+JOptionPane.YES_NO_CANCEL_OPTION
+
