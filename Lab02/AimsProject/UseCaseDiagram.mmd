@@ -1,0 +1,7 @@
+usecaseDiagram
+    actor User
+    User --> (Add DVD to Cart)
+    User --> (Remove DVD from Cart)
+    User --> (View Total Cost)
+    (Add DVD to Cart) .> (View Total Cost) : includes
+    (Remove DVD from Cart) .> (View Total Cost) : includes
