@@ -23,7 +23,7 @@ public class TestPassingParameter {
         String tempTitle = dvd1.getTitle();
         dvd1.setTitle(dvd2.getTitle());
         dvd2.setTitle(tempTitle);
-    }
+    } 
 }
 
 
