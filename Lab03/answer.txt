@@ -1,0 +1,5 @@
+- Is JAVA a Pass By Value or a Pass by Reference programming language?
++) JAVA is always a Pass by Value programming language
+chúng ta chỉ đổi title của object origin mà reference ở main method vẫn chỉ vào object đó.
+vậy nên khi swap titles của 2 objects vẫn giữ nguyên.
+changeTitle hoạt động vì nó lấy reference từ DigitalVideoDisc object xong đổi title. thay đổi được thực hiện ở cả main method.
