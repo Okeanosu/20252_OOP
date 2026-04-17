@@ -2,7 +2,8 @@ public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private final DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     private int qtyOrdered = 0;
- /*    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+
+    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
             itemsOrdered[qtyOrdered] = disc;
             qtyOrdered++;
@@ -10,8 +11,9 @@ public class Cart {
         } else {
             System.out.println("The cart is full. Cannot add more discs.");
         }
-    }*/
-  public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
         for (DigitalVideoDisc disc : dvdList) {
             if (qtyOrdered < MAX_NUMBERS_ORDERED) {
                 itemsOrdered[qtyOrdered] = disc;
@@ -23,9 +25,11 @@ public class Cart {
             }
         }
     }
+
     public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         addDigitalVideoDisc(new DigitalVideoDisc[]{dvd1, dvd2});
     }
+
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         boolean found = false;
         for (int i = 0; i < qtyOrdered; i++) {
@@ -44,11 +48,21 @@ public class Cart {
             System.out.println("The disc is not in the cart.");
         }
     }
+
     public float totalCost() {
         float total = 0;
         for (int i = 0; i < qtyOrdered; i++) {
             total += itemsOrdered[i].getCost();
         }
         return total;
+    }
+
+    public void printCart() {
+        System.out.println("***********************CART***********************");
+        for (int i = 0; i < qtyOrdered; i++) {
+            System.out.println((i + 1) + ". " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory() + " - " + itemsOrdered[i].getDirector() + " - " + itemsOrdered[i].getLength() + " mins - $" + itemsOrdered[i].getCost());
+        }
+        System.out.println("Total cost: $" + totalCost());
+        System.out.println("*************************************************");
     }
 }
