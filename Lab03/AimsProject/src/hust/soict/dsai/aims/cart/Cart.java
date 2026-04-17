@@ -77,8 +77,8 @@ public class Cart {
                 System.out.println((i + 1) + ". " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory() + " - " + itemsOrdered[i].getDirector() + " - " + itemsOrdered[i].getLength() + " mins - $" + itemsOrdered[i].getCost());
                 found = true;
             }
-        }
-        if (!found) {
+        } 
+        if (!found) { 
             System.out.println("No matching disc found in the cart.");
         }
     }
