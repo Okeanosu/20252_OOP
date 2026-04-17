@@ -7,14 +7,16 @@ public class TestPassingParameter {
         System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
     }
     // Incorrect Swap Method and changeTitle Method:
-/*     public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
-        String oldTitle = dvd1.getTitle();
-        dvd1.setTitle(dvd2.getTitle());
-        dvd2.setTitle(oldTitle);
+/*     public static void changeTitle(DigitalVideoDisc dvd, String title) {
+        String oldTitle = dvd.getTitle();
+        dvd.setTitle(title);
+        dvd = new DigitalVideoDisc(oldTitle);
     }
 
-    public static void changeTitle(DigitalVideoDisc dvd, String title) {
-        dvd.setTitle(title);
+    public static void swapTitle(Object 01, Object o2) {
+        Object tmp = o1;
+        o1 = o2;
+        o2 = tmp;
     }*/
     // Correct Swap Method:
     public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
