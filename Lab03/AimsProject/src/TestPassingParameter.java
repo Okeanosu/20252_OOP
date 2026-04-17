@@ -1,0 +1,29 @@
+public class TestPassingParameter {
+    public static void main(String[] args) {
+        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle", "Adventure", "Director", 120, 10.01f);
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella", "Animation", "Director", 90, 6.67f);
+        swap(jungleDVD, cinderellaDVD);
+        System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+        System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
+    }
+    // Incorrect Swap Method and changeTitle Method:
+/*     public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        String oldTitle = dvd1.getTitle();
+        dvd1.setTitle(dvd2.getTitle());
+        dvd2.setTitle(oldTitle);
+    }
+
+    public static void changeTitle(DigitalVideoDisc dvd, String title) {
+        dvd.setTitle(title);
+    }*/
+    // Correct Swap Method:
+    public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        String tempTitle = dvd1.getTitle();
+        dvd1.setTitle(dvd2.getTitle());
+        dvd2.setTitle(tempTitle);
+    }
+}
+
+
+
+
