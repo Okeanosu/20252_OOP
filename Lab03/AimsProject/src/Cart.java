@@ -65,4 +65,18 @@ public class Cart {
         System.out.println("Total cost: $" + totalCost());
         System.out.println("*************************************************");
     }
+    // search cart for a disc with a title that contains all the words in the search string
+    public void searchCart(String title) {
+        System.out.println("Search results for: " + title);
+        boolean found = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].search(title)) {
+                System.out.println((i + 1) + ". " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory() + " - " + itemsOrdered[i].getDirector() + " - " + itemsOrdered[i].getLength() + " mins - $" + itemsOrdered[i].getCost());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No matching disc found in the cart.");
+        }
+    }
 }
