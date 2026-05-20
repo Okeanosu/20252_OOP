@@ -24,5 +24,10 @@ public class Store {
             System.out.println("The media is not in the store.");
         }
     }
+
+    // Expose items for read-only operations
+    public ArrayList<Media> getItems() {
+        return itemInStore;
+    }
 }
 
