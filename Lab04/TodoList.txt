@@ -1,0 +1,8 @@
+Constructor for whole classes and parent classes
+-Update UML for aimsproject
+update new astah and png file in design directory
+can apply release flow by creating a branch
+topic/update-class-diagram/aims-project/lab04
+push diagram and its image then merge with master
+which classes are aggregates of other classes? checking all constructors of whole classes if they initialize for their parts?
+- write constructors for parent and childs classes. remove redundant setter methods if any
